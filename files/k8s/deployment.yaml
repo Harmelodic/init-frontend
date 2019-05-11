@@ -27,7 +27,7 @@ spec:
           failureThreshold: 60
           httpGet:
             port: 80
-            path: /
+            path: /health
       imagePullSecrets:
       - name: {{.APP_NAME}}-registry-deploy-token
   strategy:
