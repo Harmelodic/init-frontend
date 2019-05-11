@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STORE=https://gitlab.com/Harmelodic/bp-backend/raw/master/files
+STORE=https://gitlab.com/Harmelodic/bp-frontend/raw/master/files
 
 git init
 
