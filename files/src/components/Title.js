@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledTitle = styled.h1`
+const StyledTitle = styled.div`
+    font-size: 20px;
     color: #01267b;
 `
 
