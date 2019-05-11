@@ -1,0 +1,64 @@
+#!/bin/bash
+
+STORE=https://gitlab.com/Harmelodic/bp-backend/raw/master/files
+
+git init
+
+mkdir k8s
+mkdir public
+mkdir src
+mkdir src/components
+mkdir src/containers
+mkdir src/redux
+
+# Config & Build Files
+curl $STORE/.gitignore > .gitignore
+curl $STORE/.gitlab-ci.yml > .gitlab-ci.yml
+curl $STORE/Dockerfile > Dockerfile
+curl $STORE/nginx.conf > nginx.conf
+curl $STORE/package.json > package.json
+curl $STORE/webpack.config.js > webpack.config.js
+curl $STORE/webpack.dev.js > webpack.dev.js
+curl $STORE/webpack.prod.js > webpack.prod.js
+
+# K8s Files
+curl $STORE/k8s/deployment.yml > k8s/deployment.yml
+curl $STORE/k8s/ingress.yml > k8s/ingress.yml
+curl $STORE/k8s/service.yml > k8s/service.yml
+
+# Output Files
+curl $STORE/public/index.html > public/index.html
+curl $STORE/public/health > public/health
+
+# Application Code
+curl $STORE/src/components/Title.js > src/components/Title.js
+curl $STORE/src/containers/App.js > src/containers/App.js
+curl $STORE/src/containers/Index.js > src/containers/Index.js
+curl $STORE/src/redux/Actions.js > src/redux/Actions.js
+curl $STORE/src/redux/Middleware.js > src/redux/Middleware.js
+curl $STORE/src/redux/Reducers.js > src/redux/Reducers.js
+curl $STORE/src/redux/Store.js > src/redux/Store.js
+curl $STORE/src/index.js > src/index.js
+
+# Install Dependencies
+npm init -y
+npm i -D \
+    @babel/core \
+    @babel/preset-react \
+    babel-loader \
+    babel-minify-webpack-plugin \
+    compression-webpack-plugin \
+    react \
+    react-dom \
+    react-router-dom \
+    redux \
+    redux-thunk \
+    styled-components \
+    webpack \
+    webpack-cli \
+    webpack-dev-server \
+    webpack-merge
+
+# Boot
+code .
+npm start
