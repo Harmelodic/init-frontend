@@ -2,8 +2,6 @@
 
 STORE=https://gitlab.com/Harmelodic/bp-frontend/raw/master/files
 
-git init
-
 mkdir k8s
 mkdir public
 mkdir src
@@ -58,6 +56,12 @@ npm i -D \
     webpack-cli \
     webpack-dev-server \
     webpack-merge
+
+# Git init
+git init
+git add .
+git commit -m "Initial Commit"
+
 
 # Boot
 code .
