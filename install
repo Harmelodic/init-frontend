@@ -64,5 +64,7 @@ git commit -m "Initial Commit"
 
 
 # Boot
-code .
-npm start
+if [ -x "$(command -v code)" ]; then
+    code .
+    npm start
+fi

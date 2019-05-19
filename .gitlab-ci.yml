@@ -1,0 +1,15 @@
+image: docker:latest
+
+variables:
+  DOCKER_DRIVER: overlay
+
+stages:
+  - test
+  - package
+  - deploy
+
+run-test:
+  image: node
+  stage: test
+  script:
+  - ./test
