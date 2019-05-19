@@ -6,5 +6,3 @@ mkdir test-project
 cd test-project
 
 cat ../install | bash
-
-ls -la test-project
