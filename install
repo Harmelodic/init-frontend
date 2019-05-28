@@ -1,6 +1,7 @@
 #!/bin/bash
 
 STORE=https://gitlab.com/Harmelodic/bp-frontend/raw/master/files
+PROJECT_NAME=`basename $PWD`
 
 mkdir k8s
 mkdir public
@@ -8,6 +9,9 @@ mkdir src
 mkdir src/components
 mkdir src/containers
 mkdir src/redux
+
+# README
+curl $STORE/README.md | sed -e "s|PROJECT_NAME|$PROJECT_NAME|" > README.md
 
 # Config & Build Files
 curl $STORE/.gitignore > .gitignore
@@ -46,6 +50,7 @@ npm i -D \
     babel-loader \
     babel-minify-webpack-plugin \
     compression-webpack-plugin \
+    eslint \
     react \
     react-dom \
     react-router-dom \
