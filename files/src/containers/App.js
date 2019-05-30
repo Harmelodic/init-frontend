@@ -3,11 +3,11 @@ import { Switch, Route } from "react-router-dom";
 import Index from "./Index";
 
 export default class App extends React.Component {
-    render() {
-        return (
-            <Switch>
-                <Route exact path="/" component={Index} />
-            </Switch>
-        )
-    }
+  render() {
+    return (
+      <Switch>
+        <Route exact path="/" component={Index} />
+      </Switch>
+    )
+  }
 }

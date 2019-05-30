@@ -9,8 +9,8 @@ initialiseStore();
 const appRoot = document.getElementById("app");
 
 ReactDOM.render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>,
-    appRoot
+  <BrowserRouter>
+      <App />
+  </BrowserRouter>,
+  appRoot
 );

@@ -5,17 +5,17 @@ import { rootReducer } from "./Reducers";
 export let Store;
 
 export const initialiseStore = () => {
-    const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-    Store = createStore(
-        rootReducer,
-        initialState,
-        composeEnhancers(
-            applyMiddleware(thunk)
-        )
-    );
+  Store = createStore(
+    rootReducer,
+    initialState,
+    composeEnhancers(
+        applyMiddleware(thunk)
+    )
+  );
 }
 
 const initialState = {
-    // Initial State
+  // Initial State
 }
