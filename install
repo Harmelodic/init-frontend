@@ -10,7 +10,7 @@ mkdir src/components
 mkdir src/containers
 mkdir src/redux
 
-echo "Loading... READMEmd"
+echo "Loading... README.md"
 curl -s $STORE/README.md | sed -e "s|PROJECT_NAME|$PROJECT_NAME|" > README.md
 
 echo "Loading... Config & Build Files"
