@@ -10,38 +10,47 @@ mkdir src/components
 mkdir src/containers
 mkdir src/redux
 
-# README
-curl $STORE/README.md | sed -e "s|PROJECT_NAME|$PROJECT_NAME|" > README.md
+echo "Loading... READMEmd"
+curl -s $STORE/README.md | sed -e "s|PROJECT_NAME|$PROJECT_NAME|" > README.md
 
-# Config & Build Files
-curl $STORE/.eslintrc.yml > .eslintrc.yml
-curl $STORE/.gitignore > .gitignore
-curl $STORE/.gitlab-ci.yml > .gitlab-ci.yml
-curl $STORE/Dockerfile > Dockerfile
-curl $STORE/nginx.conf > nginx.conf
-curl $STORE/package.json > package.json
-curl $STORE/webpack.config.js > webpack.config.js
-curl $STORE/webpack.dev.js > webpack.dev.js
-curl $STORE/webpack.prod.js > webpack.prod.js
+echo "Loading... Config & Build Files"
+curl -s $STORE/.eslintrc.yml -O
+curl -s $STORE/.gitignore -O
+curl -s $STORE/.gitlab-ci.yml -O
+curl -s $STORE/Dockerfile -O
+curl -s $STORE/nginx.conf -O
+curl -s $STORE/package.json -O
+curl -s $STORE/webpack.config.js -O
+curl -s $STORE/webpack.dev.js -O
+curl -s $STORE/webpack.prod.js -O
 
-# K8s Files
-curl $STORE/k8s/deployment.yml > k8s/deployment.yml
-curl $STORE/k8s/ingress.yml > k8s/ingress.yml
-curl $STORE/k8s/service.yml > k8s/service.yml
+echo "Loading... K8s Files"
+cd k8s
+curl -s $STORE/k8s/deployment.yml -O
+curl -s $STORE/k8s/ingress.yml -O
+curl -s $STORE/k8s/service.yml -O
+cd ..
 
-# Output Files
-curl $STORE/public/index.html > public/index.html
-curl $STORE/public/health > public/health
+echo "Loading... Output Files"
+cd public
+curl -s $STORE/public/index.html -O
+curl -s $STORE/public/health -O
+cd ..
 
-# Application Code
-curl $STORE/src/components/Title.js > src/components/Title.js
-curl $STORE/src/containers/App.js > src/containers/App.js
-curl $STORE/src/containers/Index.js > src/containers/Index.js
-curl $STORE/src/redux/Actions.js > src/redux/Actions.js
-curl $STORE/src/redux/Middleware.js > src/redux/Middleware.js
-curl $STORE/src/redux/Reducers.js > src/redux/Reducers.js
-curl $STORE/src/redux/Store.js > src/redux/Store.js
-curl $STORE/src/index.js > src/index.js
+echo "Loading... Application Code"
+cd src/components
+curl -s $STORE/src/components/Title.js -O
+cd ../containers
+curl -s $STORE/src/containers/App.js -O
+curl -s $STORE/src/containers/Index.js -O
+cd ../redux
+curl -s $STORE/src/redux/Actions.js -O
+curl -s $STORE/src/redux/Middleware.js -O
+curl -s $STORE/src/redux/Reducers.js -O
+curl -s $STORE/src/redux/Store.js -O
+cd ..
+curl -s $STORE/src/index.js -O
+cd ..
 
 # Install Dependencies
 npm init -y
