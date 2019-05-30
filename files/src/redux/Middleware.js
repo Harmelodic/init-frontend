@@ -1,33 +1,44 @@
-import Actions from "./Actions";
+// import Actions from './Actions';
 
+/**
+ * @param {*} method
+ * @param {*} url
+ * @param {*} body
+ * @return {Promise} fetch Promise
+ */
+// eslint-disable-next-line no-unused-vars
 const httpCall = (method, url, body) => {
-  let request = {};
+  const request = {};
   request.method = method.toUpperCase();
 
   request.headers = new Headers();
-  request.headers.append("Content-Type", "application/json");
+  request.headers.append('Content-Type', 'application/json');
 
-  if (!(request.method === "GET" || request.method === "HEAD")) {
-    request.body = JSON.stringify(body); // To work with the Fetch API, the body needs to be stringified first.
+  if (!(request.method === 'GET' || request.method === 'HEAD')) {
+    // To work with the Fetch API, the body needs to be stringified first.
+    request.body = JSON.stringify(body);
   }
 
   return fetch(url, request)
-    .catch(error => {
-      console.log("Error occurred in completing " + request.method + " request to: " + url + " \n" + error);
-    })
-    .then(response => {
-      if (response.ok) {
-        return response
-      }
-      else {
-        throw response;
-      }
-    })
-}
+      .catch((error) => {
+        console.log(`Error occurred in completing ${request.method} request:`);
+        console.log(`${url} \n ${error}`);
+      })
+      .then((response) => {
+        if (response.ok) {
+          return response;
+        } else {
+          throw response;
+        }
+      });
+};
 
+/**
+ * Middleware
+ */
 export default class Middleware {
   // Insert Middleware functions
-  
+
   // static fetchHttpBinStatus() {
   //   return dispatch => {
   //     httpCall("GET", "https://www.google.com")

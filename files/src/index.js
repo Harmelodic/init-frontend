@@ -1,16 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
-import App from "./containers/App";
-import { initialiseStore } from "./redux/Store";
+import ReactDOM from 'react-dom';
+import {BrowserRouter} from 'react-router-dom';
+import App from './containers/App';
+import {initialiseStore} from './redux/Store';
 
 initialiseStore();
 
-const appRoot = document.getElementById("app");
+const appRoot = document.getElementById('app');
 
 ReactDOM.render(
-  <BrowserRouter>
+    <BrowserRouter>
       <App />
-  </BrowserRouter>,
-  appRoot
+    </BrowserRouter>,
+    appRoot
 );

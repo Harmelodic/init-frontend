@@ -1,7 +1,9 @@
 // Action Types
 // export const SOMETHING = "SOMETHING";
 
-// Action Creators
+/**
+ * Action Creators
+ */
 export default class Actions {
   // static updateSomething(something) {
   //     return {

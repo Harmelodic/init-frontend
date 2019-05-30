@@ -6,8 +6,8 @@ export const rootReducer = (state, action) => {
   return {
     // Store root
     // something: someReducer(state.something, action)
-  }
-}
+  };
+};
 
 // Reducers
 // export const someReducer = (someState, action) => {
