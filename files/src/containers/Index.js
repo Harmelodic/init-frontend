@@ -4,13 +4,7 @@ import React from 'react';
 import {Store} from '../redux/Store';
 import Title from '../components/Title';
 
-/**
- * Index
- */
 export default class Index extends React.Component {
-  /**
-   * @param {*} props
-   */
   constructor(props) {
     super(props);
 
@@ -23,9 +17,6 @@ export default class Index extends React.Component {
 
   // Insert methods
 
-  /**
-   * Component Mounted
-   */
   componentDidMount() {
     this.unsubscribe = Store.subscribe(() => {
       this.setState({
@@ -36,16 +27,10 @@ export default class Index extends React.Component {
     // Insert Middleware calls
   }
 
-  /**
-   * Component Unmounting
-   */
   componentWillUnmount() {
     this.unsubscribe();
   }
-
-  /**
-   * @return {HTMLElement} Index
-   */
+  
   render() {
     return (
       <div>

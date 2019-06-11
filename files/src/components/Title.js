@@ -6,13 +6,7 @@ const StyledTitle = styled.div`
   color: #01267b;
 `;
 
-/**
- * Title
- */
 export default class Title extends React.PureComponent {
-  /**
-   * @return {HTMLElement} Title
-   */
   render() {
     return (
       <StyledTitle>Hello World!</StyledTitle>

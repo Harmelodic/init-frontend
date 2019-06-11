@@ -1,11 +1,5 @@
 // import Actions from './Actions';
 
-/**
- * @param {*} method
- * @param {*} url
- * @param {*} body
- * @return {Promise} fetch Promise
- */
 // eslint-disable-next-line no-unused-vars
 const httpCall = (method, url, body) => {
   const request = {};
@@ -33,9 +27,6 @@ const httpCall = (method, url, body) => {
       });
 };
 
-/**
- * Middleware
- */
 export default class Middleware {
   // Insert Middleware functions
 
