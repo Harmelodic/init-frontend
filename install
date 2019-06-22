@@ -17,6 +17,7 @@ echo "Loading... Config & Build Files"
 curl -s $STORE/.eslintrc.yml -O
 curl -s $STORE/.gitignore -O
 curl -s $STORE/.gitlab-ci.yml -O
+curl -s $STORE/CONTRIBUTING.md -O
 curl -s $STORE/Dockerfile -O
 curl -s $STORE/nginx.conf -O
 curl -s $STORE/package.json -O
