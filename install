@@ -27,9 +27,9 @@ curl -s $STORE/webpack.prod.js -O
 
 echo "Loading... K8s Files"
 cd k8s
-curl -s $STORE/k8s/deployment.yml -O
-curl -s $STORE/k8s/ingress.yml -O
-curl -s $STORE/k8s/service.yml -O
+curl -s $STORE/k8s/deployment.yaml -O
+curl -s $STORE/k8s/ingress.yaml -O
+curl -s $STORE/k8s/service.yaml -O
 cd ..
 
 echo "Loading... Output Files"
