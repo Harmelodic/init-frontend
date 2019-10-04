@@ -1,23 +1,23 @@
-// import {
-//   SOMETHING
-// } from "./Actions";
+import {
+  SET_TITLE,
+} from './Actions';
 
 export const rootReducer = (state, action) => {
   return {
     // Store root
-    // something: someReducer(state.something, action)
+    title: titleReducer(state.title, action),
   };
 };
 
 // Reducers
-// export const someReducer = (someState, action) => {
-//   let something = someState;
+export const titleReducer = (titleState, action) => {
+  let title = titleState;
 
-//   switch (action.type) {
-//     case SOMETHING:
-//       something = action.something
-//       break;
-//   }
+  switch (action.type) {
+    case SET_TITLE:
+      title = action.title;
+      break;
+  }
 
-//   return something;
-// }
+  return title;
+};

@@ -1,11 +1,11 @@
 // Action Types
-// export const SOMETHING = "SOMETHING";
+export const SET_TITLE = 'SET_TITLE';
 
 export default class Actions {
-  // static updateSomething(something) {
-  //     return {
-  //         type: SOMETHING,
-  //         value
-  //     }
-  // }
+  static setTitle(title) {
+    return {
+      type: SET_TITLE,
+      title,
+    };
+  }
 }

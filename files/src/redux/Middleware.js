@@ -1,4 +1,4 @@
-// import Actions from './Actions';
+import Actions from './Actions';
 
 // eslint-disable-next-line no-unused-vars
 const httpCall = (method, url, body) => {
@@ -30,15 +30,23 @@ const httpCall = (method, url, body) => {
 export default class Middleware {
   // Insert Middleware functions
 
-  // static fetchHttpBinStatus() {
-  //   return dispatch => {
-  //     httpCall("GET", "https://www.google.com")
-  //       .then(response => {
-  //         // Any 2xx response
-  //       })
-  //       .catch(response => {
-  //         // Any non-2xx response
-  //       })
-  //   }
-  // }
+  static fetchTitle() {
+    return (dispatch) => {
+      httpCall('GET', '/api/')
+          .then((response) => {
+            response.json()
+                .then((data) => {
+                  dispatch(Actions.setTitle(data));
+                })
+                .catch(() => {
+                  dispatch(Actions.setTitle('Hello World!'));
+                });
+            // Any 2xx response
+          })
+          .catch((response) => {
+            // Any non-2xx response
+            dispatch(Actions.setTitle('Hello World!'));
+          });
+    };
+  }
 }

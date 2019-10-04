@@ -9,7 +9,7 @@ const StyledTitle = styled.div`
 export default class Title extends React.PureComponent {
   render() {
     return (
-      <StyledTitle>Hello World!</StyledTitle>
+      <StyledTitle>{this.props.title}</StyledTitle>
     );
   }
 }

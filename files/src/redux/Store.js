@@ -18,5 +18,5 @@ export const initialiseStore = () => {
 };
 
 const initialState = {
-  // Initial State
+  title: 'Initial Title',
 };

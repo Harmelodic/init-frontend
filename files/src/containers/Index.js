@@ -1,6 +1,5 @@
 import React from 'react';
-// import Actions from '../redux/Actions';
-// import Middleware from '../redux/Middleware';
+import Middleware from '../redux/Middleware';
 import {Store} from '../redux/Store';
 import Title from '../components/Title';
 
@@ -9,32 +8,28 @@ export default class Index extends React.Component {
     super(props);
 
     this.state = {
-      // Insert state
+      title: Store.getState().title,
     };
-
-    // Insert method bindings
   }
-
-  // Insert methods
 
   componentDidMount() {
     this.unsubscribe = Store.subscribe(() => {
       this.setState({
-        // Insert Store update calls to state
+        title: Store.getState().title,
       });
     });
 
-    // Insert Middleware calls
+    Store.dispatch(Middleware.fetchTitle());
   }
 
   componentWillUnmount() {
     this.unsubscribe();
   }
-  
+
   render() {
     return (
       <div>
-        <Title />
+        <Title title={this.state.title}/>
       </div>
     );
   }
