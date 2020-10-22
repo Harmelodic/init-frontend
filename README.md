@@ -1,3 +1,5 @@
+**CURRENTLY BROKEN DUE TO WEBPACK CLI ISSUES**
+
 # init-frontend
 
 How frontend apps are built.
