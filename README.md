@@ -1,4 +1,4 @@
-**CURRENTLY BROKEN DUE TO WEBPACK CLI ISSUES**
+**IF `npm start` FAILS, THEN DOWNGRADE WEBPACK-CLI to v3.x.x**
 
 # init-frontend
 
