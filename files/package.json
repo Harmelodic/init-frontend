@@ -4,8 +4,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/* --fix",
-    "start": "webpack-dev-server --inline --history-api-fallback --content-base ./public/ --hot --config webpack.dev.js",
-    "start:prod": "webpack-dev-server --inline --history-api-fallback --content-base ./public/ --hot --compress --config webpack.prod.js",
+    "start": "webpack serve --inline --history-api-fallback --content-base ./public/ --hot --config webpack.dev.js",
+    "start:prod": "webpack serve --inline --history-api-fallback --content-base ./public/ --hot --compress --config webpack.prod.js",
     "build": "webpack --config webpack.prod.js",
     "docker:build": "docker build -t $npm_package_name:latest .",
     "docker:run": "docker run --name $npm_package_name -d -p 8080:80 $npm_package_name:latest",

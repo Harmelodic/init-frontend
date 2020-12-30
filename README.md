@@ -1,5 +1,3 @@
-**IF `npm start` FAILS, THEN DOWNGRADE WEBPACK-CLI to v3.x.x**
-
 # init-frontend
 
 How frontend apps are built.
