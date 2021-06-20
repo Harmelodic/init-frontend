@@ -55,25 +55,32 @@ cd ..
 
 # Install Dependencies
 npm init -y
-npm i -D \
-    @babel/core \
-    @babel/preset-react \
-    babel-loader \
-    babel-minify-webpack-plugin \
-    compression-webpack-plugin \
-    eslint \
-    eslint-config-google \
-    eslint-plugin-react \
-    react \
-    react-dom \
-    react-router-dom \
-    redux \
-    redux-thunk \
-    styled-components \
-    webpack \
+
+## Webpack
+npm i -D webpack \
     webpack-cli \
     webpack-dev-server \
     webpack-merge
+
+## Babel
+npm i -D @babel/core \
+    @babel/preset-react \
+    babel-loader \
+    compression-webpack-plugin
+
+## Linting
+npm i -D eslint \
+    eslint-config-google \
+    eslint-plugin-react
+
+## Development
+npm i -D react \
+    react-dom \
+    react-redux \
+    react-router-dom \
+    redux \
+    redux-thunk \
+    styled-components
 
 npm run lint
 

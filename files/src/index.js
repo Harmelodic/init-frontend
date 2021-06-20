@@ -1,17 +1,18 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
 import ReactDOM from 'react-dom';
-import {BrowserRouter} from 'react-router-dom';
-import App from './containers/App';
-import {initialiseStore} from './redux/Store';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { App } from './app/App';
+import { initialiseStore } from './store';
 
-initialiseStore();
+const store = initialiseStore();
 
 const appRoot = document.getElementById('app');
 
 ReactDOM.render(
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>,
-    appRoot
+	<Provider store={store}>
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
+	</Provider>,
+	appRoot,
 );
