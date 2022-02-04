@@ -1,10 +1,10 @@
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Home } from './home/Home';
 
 export function App() {
 	return (
-		<Switch>
+		<Routes>
 			<Route exact path="/" component={Home} />
-		</Switch>
+		</Routes>
 	);
 }
