@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STORE=https://gitlab.com/Harmelodic/init-frontend/raw/master/files
+STORE=https://raw.githubusercontent.com/Harmelodic/init-frontend/master/files
 PROJECT_NAME=`basename $PWD`
 
 mkdir k8s

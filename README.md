@@ -12,5 +12,5 @@ How frontend apps are built.
 Make a new directory, cd into it and perform:
 
 ```
-$ curl -s https://gitlab.com/Harmelodic/init-frontend/raw/master/install | bash
+$ curl -s https://github.com/Harmelodic/init-frontend/raw/master/install | bash
 ```
