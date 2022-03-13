@@ -17,3 +17,4 @@ jobs:
         with:
           node-version: 17
       - run: npm test
+      - run: npm run build
