@@ -2,15 +2,10 @@
   "version": "1.0.0",
   "main": "public/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No test specified\"",
     "lint": "eslint src/* --fix",
     "start": "webpack serve --config webpack.dev.js",
-    "start:prod": "webpack serve --config webpack.prod.js",
-    "build": "webpack --config webpack.prod.js",
-    "docker:build": "docker build -t $npm_package_name:latest .",
-    "docker:run": "docker run --name $npm_package_name -d -p 8080:80 $npm_package_name:latest",
-    "docker": "npm run build && npm run docker:build && npm run docker:run",
-    "docker:destroy": "docker stop $npm_package_name && docker rm $npm_package_name && docker rmi $npm_package_name"
+    "build": "webpack --config webpack.prod.js"
   },
   "license": "UNLICENSED",
   "name": "files",
@@ -21,20 +16,20 @@
     "@babel/core": "^7.14.6",
     "@babel/preset-react": "^7.14.5",
     "babel-loader": "^8.2.2",
-    "compression-webpack-plugin": "^8.0.0",
-    "eslint": "^7.29.0",
+    "compression-webpack-plugin": "^9.2.0",
+    "eslint": "^8.11.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.24.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
-    "react-router-dom": "^5.2.0",
+    "react-router-dom": "^6.2.2",
     "redux": "^4.1.0",
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.3.0",
     "webpack": "^5.39.1",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2",
+    "webpack-dev-server": "^4.7.4",
     "webpack-merge": "^5.8.0"
   }
 }

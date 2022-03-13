@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Title } from './Title';
+import { Title } from '../../lib/Title';
 import { fetchTitle } from './middleware';
 
 export function Home() {

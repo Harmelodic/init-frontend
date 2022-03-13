@@ -1,8 +1,0 @@
-#!/bin/bash
-
-set -e
-
-mkdir test-project
-cd test-project
-
-cat ../install | bash

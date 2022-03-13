@@ -7,10 +7,18 @@ How frontend apps are built.
 - npm
 - git
 
-## Install
-
-Make a new directory, cd into it and perform:
+## Running locally
 
 ```
-$ curl -s https://github.com/Harmelodic/init-frontend/raw/master/install | bash
+$ npm start
 ```
+
+## Running linter
+
+```
+$ npm run lint
+```
+
+## Contributing
+
+Read: `CONTRIBUTING.md`

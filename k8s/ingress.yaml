@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: init-frontend
+  labels:
+    app: init-frontend
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: init-frontend.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: init-frontend
+                port:
+                  name: http
