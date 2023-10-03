@@ -2,6 +2,10 @@
 
 How frontend apps are built.
 
+## TODO
+
+- [ ] Convert to a Next.js application - for server-side rendering & frontend modernity
+
 ## Requirements
 
 - npm
