@@ -13,7 +13,7 @@
   "keywords": [],
   "author": "",
   "devDependencies": {
-    "@babel/core": "7.23.7",
+    "@babel/core": "7.23.9",
     "@babel/preset-react": "7.23.3",
     "babel-loader": "9.1.3",
     "compression-webpack-plugin": "11.0.0",
