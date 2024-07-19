@@ -2,7 +2,7 @@
 
 ## Technologies
 
-[npm](https://docs.npmjs.com/) is the package/dependency manager for JavaScript projects. Add dependencies, run scripts and application metadata to `package.json`.
+[npm](https://docs.npmjs.com/) is the package manager for JavaScript projects. Add dependencies, run scripts and application metadata to `package.json`.
 
 [React](https://reactjs.org/) is a library for creating components in a neat and composable manner.
 
@@ -12,44 +12,26 @@
 
 [styled-components](https://www.styled-components.com/) is a library for writing CSS to create components in JavaScript.
 
-## Patterns / Project Structure
+[eslint](https://eslint.org/) is a tool for analysing & linting JavaScript code.
 
-### Presentational vs Container components
+[nginx](https://nginx.org/) is a webserver.
 
-Container components are React components that pull in state from the Redux store and define how your webpage is split up.  
-The returned JSX in the render function of a Container component should contain either smaller Container components, Presentational components, styled-components or plain HTML.  
-Examples of Container components are: A header bar, a menu, an embedded map, an embedded social media feed, and even the entire App itself.  
-Container components are found in `src/containers/`.
+[webpack](https://webpack.js.org/) is a packaging/bundling tool for compiling JavaScript projects.
 
-Presentational components are React components that define how elements of your page will look and function by default.  
-The returned JSX in the render function of a Presentational component should contain either further Presentational components, styled-components or plain HTML.  
-Examples of Presentational components are: A button, a menu item, a text field, an interactable image.  
-Presentational components are found in `src/components/`.
+## Decoupling
 
-### Redux Isolation
+The Redux implementation is isolated in the `src/store/` directory, and are only consumed by React Hooks.
 
-Redux is made of 5 features: A **Store**, **Actions**, **Middleware**, **Reducers**, and **Subscriptions**.
+React Hooks are isolated to the `src/hooks/` directory. Hooks consume data from Redux, HTTP APIs, other Hooks, etc. and provide that data & related-functions to the UI.
 
-All Redux features, *except Subscriptions*, are isolated in the `src/redux/` directory.
+The actual UI implementation is isolated to the `src/ui/` directory. UI code can only interact with other things through Hooks.
 
-Subscriptions are defined in Container components. You must subscribe to the Store in the `componentDidMount()` React function and unsubscribe from the Store in the `componentWillUnmount()` React function.
+## CI
 
-The **Store** is an immutable JSON object, defined and exposed in the `Store.js` file.
-
-**Actions** are functions that can be dispatched to the Store to update data stored in the Store.
-
-**Middleware** are functions that can be dispatched to the Store to perform asynchronous calls to external systems that may end up updating the Store. These are *usually* HTTP calls.
-
-**Reducers** are a functions, in a tree structure, that define how the Store is created and how Actions of certain types affect the Store.
-
-**Subscriptions** are listeners that subscribe to the Store to listen for changes to the Store. When a change occurs in the Store, all Subscriptions should update themselves with the most recent data from the Store, pertitent to their context.
-
-## CI/CD
-
-The CI/CD pipeline is tailored for GitLab and defined in the `.gitlab-ci.yml` file.
+The CI pipeline is tailored for GitHub Actions and defined in the `.github` directory.
 
 The app's JavaScript is built using Webpack.
 
 The app is built into a NGINX Docker container, where the Docker config is defined in the `Dockerfile` file, and custom NGINX config is defined in `nginx.conf`.
 
-The app can be deployed to a Kubernetes cluster using the Kubernetes YAML files defined in `k8s/`.
+The app can be deployed to a Kubernetes cluster using the Kubernetes YAML files defined in `kustomize/`.
