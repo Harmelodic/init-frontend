@@ -1,12 +1,25 @@
-import { useSelector } from 'react-redux';
+import styled from 'styled-components';
+import { useTitle } from '../../hooks/useTitle';
 import { Title } from '../lib/Title';
 
+const StyledHome = styled.div`
+	text-align: center;
+`;
+
 export function Home() {
-	const title = useSelector(store => store.title);
+	const { title, setTitle } = useTitle();
+
+	function onInputChange(event) {
+		setTitle(event.target.value)
+	}
 
 	return (
-		<div>
+		<StyledHome>
 			<Title title={title} />
-		</div>
+			<input type="text" 
+				onChange={onInputChange}
+				placeholder="Put a title here"
+				value={title} />
+		</StyledHome>
 	);
 }
