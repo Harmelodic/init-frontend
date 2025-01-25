@@ -19,7 +19,7 @@
 		"babel-loader": "9.2.1",
 		"compression-webpack-plugin": "11.1.0",
 		"eslint": "9.19.0",
-		"eslint-plugin-jsdoc": "50.6.2",
+		"eslint-plugin-jsdoc": "50.6.3",
 		"react": "19.0.0",
 		"react-dom": "19.0.0",
 		"react-redux": "9.2.0",
