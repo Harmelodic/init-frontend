@@ -311,6 +311,23 @@ standard:
 - W3C Accessibility Standards, works with screen readers, light/dark/system/colour-blind theming.
 - Minimal maintenance and need for refactoring (relies on a stable ecosystem)
 
+### Code structure preferences
+
+Unless a framework dictates a directory structure, I expect to structure my code along the lines of the following:
+
+```
+docs/ <= Docs for the project, built with MkDocs.
+src/
+  integrations/  <= For code that links the UI to APIs (e.g. React Hooks)
+  public/        <=  For static content that is hosted on the webserver (e.g. the sitemap, the favicon, etc.)
+  ui/            <= For the actual UI pages
+  ui-components/ <= For reusable custom UI components
+test/
+  <same-structure-as-src>
+...
+config-files.json.yaml.js
+```
+
 ### Testing ideals
 
 - Code analysis / linting for:
