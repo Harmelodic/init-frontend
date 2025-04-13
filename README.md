@@ -36,8 +36,8 @@ Custom site tech stack, in 2025:
 | Build Tools             | npm + Turbopack                                                                                |
 | Accessibility           | W3C Accessibility Standards, works with screen readers, light/dark/system/colour-blind theming |
 | Common libraries        | swr/fetch for client-side fetching, date-fns for date management                               |
+| Hosting                 | Container (or serverless)                                                                      |
 | Content Management      | Headless CMS + a CDN                                                                           |
-| Hosting                 | Serverless or Kubernetes (containerized)                                                       |
 
 ## Paradigm Shifts
 
@@ -52,8 +52,6 @@ From an inside and outside perspective, these paradigm shifts can be exciting an
 hope that the ecosystem eventually settles (and there are some technologies that the ecosystem seems to be settling on).
 
 Below, I have documented the paradigm shifts (from my perspective) over time:
-
-TODO: More writing of this 👇 - cover things like npm vs yarn vs pnpm, Hooks, Server Components, etc.
 
 ### 1990s
 
@@ -204,19 +202,21 @@ Improvements and convergence around Jest has led to Jest being the testing frame
 
 A desire for a static typing has grown slowly in the JavaScript, with TypeScript leading this.
 
+Handling and formatting dates consistently is desired, leading to the popularity of moment.js.
+
 Tech Stack:
 
-- Client-side single-page applications with React and TypeScript.
-- Routing in the single-page application with React-Router.
-- State management with Redux.
-- Styling as CSS-in-JS with styled-components
-- Linting with ESLint
-- Testing with Jest.
-- Served from Node.js / Express.js webserver in a (Docker) container.
-- Transpiling with Babel.
-- Project managed, packaged by:
-    - Webpack for bundling.
-    - npm, pnpm yarn for project management.
+| Component / Requirement | Solution                                                                                          |
+|-------------------------|---------------------------------------------------------------------------------------------------|
+| Programming language    | TypeScript                                                                                        |
+| Framework               | React single-page application.                                                                    |
+| Styling                 | styled-components + some vanilla CSS + {your-favourite-charting-library} (e.g. D3.js, Highcharts) |
+| Common libraries        | moment.js for date management, Redux for state management.                                        |
+| Linting                 | ESLint                                                                                            |
+| Testing                 | Jest                                                                                              |
+| Build Tools             | npm / pnpm / yarn with Webpack and Babel.                                                         |
+| Hosting                 | Node.js, Express.js in a Container (or serverless)                                                |
+| Content Management      | Headless CMS + a CDN                                                                              |
 
 ### Early 2020s
 
@@ -239,16 +239,19 @@ server-side rendering has returned - this is aided by React 18's shipping of som
 solutions for this are being implemented, but adoption of opinionated frameworks that use the "React, TypeScript +
 others" ecosystem that also offer server-side rendering are increasing, most notably: Next.js.
 
-- Web Frontend (client & server-side) applications with: Next.js, React and TypeScript.
-- State management (if any) with Redux.
-- Styling as CSS-in-JS with styled-components.
-- Linting with ESLint and Prettier.
-- Testing with Jest.
-- Served with Next.js in a (Docker) container.
-- Transpiling with Babel (handled by Next.js).
-- Project managed, packaged by:
-    - Next.js + Webpack for bundling.
-    - npm for project management.
+Tech Stack:
+
+| Component / Requirement | Solution                                                                                          |
+|-------------------------|---------------------------------------------------------------------------------------------------|
+| Programming language    | TypeScript                                                                                        |
+| Framework               | Next.js / React - mix of server-side & client-side code as needed.                                |
+| Styling                 | styled-components + some vanilla CSS + {your-favourite-charting-library} (e.g. D3.js, Highcharts) |
+| Common libraries        | date-fns for date management, Redux for state management.                                         |
+| Linting                 | ESLint + Prettier + Husky (pre-commit hooks)                                                      |
+| Testing                 | Jest                                                                                              |
+| Build Tools             | npm (with Next.js, Webpack and Babel)                                                             |
+| Hosting                 | Container (or serverless)                                                                         |
+| Content Management      | Headless CMS + a CDN                                                                              |
 
 ### Mid 2020s
 
@@ -271,13 +274,12 @@ Vitest appears as an alternative to Jest, for faster test execution.
 | Programming language    | TypeScript                                                                                     |
 | Framework               | Next.js / React - mix of Server & Client components as necessary                               |
 | Styling                 | Tailwind + some vanilla CSS + {your-favourite-charting-library} (e.g. D3.js, Highcharts)       |
+| Common libraries        | date-fns for date management                                                                   |
 | Linting                 | ESLint + Prettier + Husky (pre-commit hooks)                                                   |
 | Testing                 | Jest or Vitest, with Mock Service Worker                                                       |
 | Build Tools             | npm (+ Turbopack)                                                                              |
-| Accessibility           | W3C Accessibility Standards, works with screen readers, light/dark/system/colour-blind theming |
-| Common libraries        | swr/fetch for client-side fetching, date-fns for date management                               |
-| Content Management      | Headless CMS + a CDN                                                                           |
 | Hosting                 | Container (or serverless)                                                                      |
+| Content Management      | Headless CMS + a CDN                                                                           |
 
 ## My personal preferences
 
