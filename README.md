@@ -1,4 +1,4 @@
-# init-frontend
+# init-web-frontend
 
 How web frontends are built.
 
@@ -8,6 +8,9 @@ choose different options depending on the _purpose_.
 ## The current paradigm
 
 As of 2025:
+
+Want to just host a bunch of relatively static content, such as documentation?  
+Use MkDocs.
 
 Want to make a personal site, or just simple website - maybe with some commercial features?  
 Use a Website builder with an easy hosting option (e.g. Squarespace, Wix, etc.).
