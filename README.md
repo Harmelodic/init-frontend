@@ -170,6 +170,7 @@ run tests, precompile, transcompile, and package projects.
 
 Tech Stack:
 
+- Programming in JavaScript.
 - Client-side single-page applications, choose from:
     - React
     - AngularJS (relatively swiftly replaced with Angular (2+))
@@ -233,9 +234,9 @@ Tech Stack:
 
 ### Early 2020s
 
-Further improvements in existing technologies maintain the dominance of most of the stack. Notably, in React 16.8, React
-Hooks is released, which pioneers a shift from class-based components managing state and lifecycles, to functional
-components with Hooks managing state and lifecycles.
+Further improvements in existing technologies maintain the dominance of most of the stack. Notably, in React 16.8 (in
+2019), React Hooks is released, which pioneers a shift from class-based components managing state and lifecycles, to
+functional components with Hooks managing state and "effects".
 
 Redux dominance begins to wane (but doesn't disappear) as state with React Hooks becomes easier to implement, and
 developers push state management out of the presentational-focused frontend and into backend (e.g. BFFs or plain APIs)
@@ -257,9 +258,9 @@ Tech Stack:
 | Component / Requirement | Solution                                                                                          |
 |-------------------------|---------------------------------------------------------------------------------------------------|
 | Programming language    | TypeScript                                                                                        |
-| Framework               | Next.js / React - mix of server-side & client-side code as needed.                                |
+| Framework               | Next.js / React - mostly client-side functional components code, with some server-side rendering. |
 | Styling                 | styled-components + some vanilla CSS + {your-favourite-charting-library} (e.g. D3.js, Highcharts) |
-| Common libraries        | date-fns for date management, Redux for state management.                                         |
+| Common libraries        | date-fns for date management, Redux for state management (if any).                                |
 | Linting                 | ESLint + Prettier + Husky (pre-commit hooks)                                                      |
 | Testing                 | Jest                                                                                              |
 | Build Tools             | npm (with Next.js, Webpack and Babel)                                                             |
