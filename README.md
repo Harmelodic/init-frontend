@@ -25,21 +25,7 @@ Use an ecommerce website building & hosting platform (Squarespace, Shopify, etc.
 
 Want to make something more custom / original, either because you're offering a service, or you just want to showcase
 web development skills?  
-Make a custom site and host it yourself.
-
-Custom site tech stack, in 2025:
-
-| Component / Requirement | Solution                                                                                 |
-|-------------------------|------------------------------------------------------------------------------------------|
-| Programming language    | TypeScript                                                                               |
-| Framework               | Next.js / React - mix of Server & Client components as necessary                         |
-| Styling                 | Tailwind + some vanilla CSS + {your-favourite-charting-library} (e.g. D3.js, Highcharts) |
-| Common libraries        | date-fns for date management                                                             |
-| Linting                 | ESLint + Prettier + Husky (pre-commit hooks)                                             |
-| Testing                 | Jest or Vitest, with Mock Service Worker                                                 |
-| Build Tools             | npm + Turbopack                                                                          |
-| Hosting                 | Container (or serverless)                                                                |
-| Content Management      | Headless CMS + a CDN                                                                     |
+Make a custom site and host it yourself, using the latest paradigms and technologies (see below).
 
 ## Paradigm Shifts and Technology Trends
 
