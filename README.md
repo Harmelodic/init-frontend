@@ -26,27 +26,27 @@ Make a custom site and host it yourself.
 
 Custom site tech stack, in 2025:
 
-| Component / Requirement | Solution                                                                                       |
-|-------------------------|------------------------------------------------------------------------------------------------|
-| Programming language    | TypeScript                                                                                     |
-| Framework               | Next.js / React - mix of Server & Client components as necessary                               |
-| Styling                 | Tailwind + some vanilla CSS + {your-favourite-charting-library} (e.g. D3.js, Highcharts)       |
-| Linting                 | ESLint + Prettier + Husky (pre-commit hooks)                                                   |
-| Testing                 | Jest or Vitest, with Mock Service Worker                                                       |
-| Build Tools             | npm + Turbopack                                                                                |
-| Accessibility           | W3C Accessibility Standards, works with screen readers, light/dark/system/colour-blind theming |
-| Common libraries        | swr/fetch for client-side fetching, date-fns for date management                               |
-| Hosting                 | Container (or serverless)                                                                      |
-| Content Management      | Headless CMS + a CDN                                                                           |
+| Component / Requirement | Solution                                                                                 |
+|-------------------------|------------------------------------------------------------------------------------------|
+| Programming language    | TypeScript                                                                               |
+| Framework               | Next.js / React - mix of Server & Client components as necessary                         |
+| Styling                 | Tailwind + some vanilla CSS + {your-favourite-charting-library} (e.g. D3.js, Highcharts) |
+| Common libraries        | date-fns for date management                                                             |
+| Linting                 | ESLint + Prettier + Husky (pre-commit hooks)                                             |
+| Testing                 | Jest or Vitest, with Mock Service Worker                                                 |
+| Build Tools             | npm + Turbopack                                                                          |
+| Hosting                 | Container (or serverless)                                                                |
+| Content Management      | Headless CMS + a CDN                                                                     |
 
-## Paradigm Shifts
+## Paradigm Shifts and Technology Trends
 
 While the "backend" world has a bunch of different programming languages and choices, each programming language
 ecosystem offers a relatively unchanging set of standard frameworks/tools.
 
 This is not the case for the web frontend ecosystem, which instead changes technologies and philosophy quite often -
 occasionally even returning to previously adopted methodologies but with a different technology stack. I've heard these
-moves be referred to as "paradigm shifts".
+moves be referred to as "paradigm shifts" but these aren't necessarily always large paradigm shifts but could be simply
+problems solved with new technologies or the developer community shifting in preference.
 
 From an inside and outside perspective, these paradigm shifts can be exciting and frustrating for a myriad of reasons. I
 hope that the ecosystem eventually settles (and there are some technologies that the ecosystem seems to be settling on).
@@ -113,7 +113,12 @@ Node.js and NPM have also just been invented, meaning developers comfortable wit
 developing server-side applications in JavaScript (this begins the explosive rise of new JavaScript technologies that
 will soon take hold).
 
-Multiple other JavaScript projects (CoffeeScript, AngularJS, are also invented which are helping the )
+Multiple other JavaScript projects (CoffeeScript, AngularJS, are also invented which are helping the JavaScript
+ecosystem flourish).
+
+"Content" can now be managed in a CDN (Content Delivery Network) which improves content download speeds for clients, as
+content is hosted geographically closer, and improves server performance by offloading content-serving tasks from the
+webserver.
 
 Tech Stack:
 
@@ -127,6 +132,7 @@ Tech Stack:
     - C# (with ASP.NET and some others) on Windows Server.
     - Python (with Django and some others)
     - Node.js (with npm and mustache) and Express.js server.
+- Content hosted in a CDN.
 
 ### Mid 2010s
 
@@ -204,6 +210,10 @@ A desire for a static typing has grown slowly in the JavaScript, with TypeScript
 
 Handling and formatting dates consistently is desired, leading to the popularity of moment.js.
 
+Organisations want to manage content not just in a CDN, but manage their other content (hosted in CMS websites) in the
+same place. A "headless" CMS aids management on this content, both static and dynamic, whilst serving it still can be
+handled by an CDN.
+
 Tech Stack:
 
 | Component / Requirement | Solution                                                                                          |
@@ -269,17 +279,17 @@ Next.js remains slightly more popular.
 
 Vitest appears as an alternative to Jest, for faster test execution.
 
-| Component / Requirement | Solution                                                                                       |
-|-------------------------|------------------------------------------------------------------------------------------------|
-| Programming language    | TypeScript                                                                                     |
-| Framework               | Next.js / React - mix of Server & Client components as necessary                               |
-| Styling                 | Tailwind + some vanilla CSS + {your-favourite-charting-library} (e.g. D3.js, Highcharts)       |
-| Common libraries        | date-fns for date management                                                                   |
-| Linting                 | ESLint + Prettier + Husky (pre-commit hooks)                                                   |
-| Testing                 | Jest or Vitest, with Mock Service Worker                                                       |
-| Build Tools             | npm (+ Turbopack)                                                                              |
-| Hosting                 | Container (or serverless)                                                                      |
-| Content Management      | Headless CMS + a CDN                                                                           |
+| Component / Requirement | Solution                                                                                 |
+|-------------------------|------------------------------------------------------------------------------------------|
+| Programming language    | TypeScript                                                                               |
+| Framework               | Next.js / React - mix of Server & Client components as necessary                         |
+| Styling                 | Tailwind + some vanilla CSS + {your-favourite-charting-library} (e.g. D3.js, Highcharts) |
+| Common libraries        | date-fns for date management                                                             |
+| Linting                 | ESLint + Prettier + Husky (pre-commit hooks)                                             |
+| Testing                 | Jest or Vitest, with Mock Service Worker                                                 |
+| Build Tools             | npm (+ Turbopack)                                                                        |
+| Hosting                 | Container (or serverless)                                                                |
+| Content Management      | Headless CMS + a CDN                                                                     |
 
 ## My personal preferences
 
@@ -290,7 +300,7 @@ standard:
 - A simple way to handle both server-side rendering and client-side rendering, that makes it clear which "components"
   are rendered where, and makes modifications easy.
 - The basic "frame" be server-side rendered, with heavily data-driven components and less-critical features be
-  client-side rendered (with pre-rendering).
+  client-side rendered (with pre-rendering for SEO).
 - Robust shift-left testing, with contract testing.
 - Runtime mocking for purely local development.
 - No monorepos. 1 webapp = 1 repo (possibly have "micro-frontends" for very large websites with multiple systems).
