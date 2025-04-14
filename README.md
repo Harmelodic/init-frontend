@@ -5,15 +5,13 @@ How web frontends are built.
 ...Except you can build web frontends in a variety of different ways, each having their trade-offs, and you should
 choose different options depending on the _purpose_.
 
-## The current paradigm
-
-As of 2025:
+## The choices
 
 Want to just host a bunch of relatively static content, such as documentation?  
-Use MkDocs.
+Use MkDocs, or just have a webserver and host your content.
 
 Want to make a personal site, or just simple website - maybe with some commercial features?  
-Use a Website builder with an easy hosting option (e.g. Squarespace, Wix, etc.).
+Use a simple website builder with an easy hosting option (e.g. Squarespace, Wix, etc.).
 
 Want to make a site where you have more control over the site structure and content - e.g. more advanced user wanting to
 customize a blog, journalistic website, etc.?  
@@ -21,7 +19,7 @@ Use a CMS (WordPress, Drupal, etc.) and host it through a CMS-hosting provider o
 or managed) if you're comfortable with that.
 
 Want to make an easy-to-manage ecommerce website?  
-Use an ecommerce website building & hosting platform (Squarespace, Shopify, etc.).
+Use a website builder / ecommerce building & hosting platform (Squarespace, Shopify, etc.).
 
 Want to make something more custom / original, either because you're offering a service, or you just want to showcase
 web development skills?  
