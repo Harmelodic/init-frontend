@@ -158,13 +158,12 @@ Tech Stack:
 
 - Programming in JavaScript.
 - Client-side single-page applications, choose from:
-    - React
+    - React (with React Router for routing/navigation)
     - AngularJS (relatively swiftly replaced with Angular (2+))
     - Vue.js
     - Ember.js
     - Meteor
     - etc.
-- Routing in the single-page application with React-Router.
 - Styling with Bootstrap.
 - Linting with ESLint.
 - Testing with Jest, Mocha & Jasmine.
@@ -196,7 +195,7 @@ Improvements with npm, pnpm, and yarn have led stability on these choices for pr
 
 Improvements and convergence around Jest has led to Jest being the testing framework of choice.
 
-A desire for a static typing has grown slowly in the JavaScript, with TypeScript leading this.
+A desire for a static typing has grown slowly in the JavaScript community, with TypeScript leading this.
 
 Handling and formatting dates consistently is desired, leading to the popularity of moment.js.
 
@@ -209,7 +208,7 @@ Tech Stack:
 | Component / Requirement | Solution                                                                                          |
 |-------------------------|---------------------------------------------------------------------------------------------------|
 | Programming language    | TypeScript                                                                                        |
-| Framework               | React single-page application.                                                                    |
+| Framework               | React single-page application (React Router for routing/navigation).                              |
 | Styling                 | styled-components + some vanilla CSS + {your-favourite-charting-library} (e.g. D3.js, Highcharts) |
 | Common libraries        | moment.js for date management, Redux for state management.                                        |
 | Linting                 | ESLint                                                                                            |
